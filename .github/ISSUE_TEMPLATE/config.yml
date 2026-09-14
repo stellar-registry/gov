@@ -1,0 +1,4 @@
+# Keep blank issues available — not every governance request fits a
+# template yet (see README.md), and gov#1 (a multi-round subregistry
+# request) predates any template.
+blank_issues_enabled: true
