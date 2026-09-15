@@ -13,9 +13,8 @@ vote, and execution — see the [rgstry.xyz governance
 forms](https://stellar.rgstry.xyz/governance).
 
 **Mainnet's manager is still a plain admin key** — there's no on-chain DAO
-gating there yet. So on mainnet, a request starts here as a GitHub issue
-instead: a maintainer reviews it and runs the requested change by hand. We
-aim for a **~24-hour response time**.
+gating there _yet_. So on mainnet, a request starts here as a GitHub issue
+instead: a maintainer reviews it and runs the requested change by hand.
 
 Opening an issue against a template pre-fills the transaction a maintainer
 needs to run — see [#1](https://github.com/stellar-registry/gov/issues/1)
@@ -27,8 +26,4 @@ for a real (pre-template) example of how one of these played out.
 | --- | --- |
 | [Add contract to root registry](.github/ISSUE_TEMPLATE/add-contract-to-root-registry.yml) | Register an already-deployed contract instance in the root registry |
 
-More templates ("add wasm to root registry", "create a new subregistry")
-land here as their corresponding [rgstry.xyz governance
-forms](https://github.com/stellar-registry/ui/issues/51) ship — see that
-issue for the current plan. Until then, or for anything that doesn't fit a
-template, [open a blank issue](https://github.com/stellar-registry/gov/issues/new).
+To add wasm to root registry, create a new subregistry, or other governance request, [open a blank issue](https://github.com/stellar-registry/gov/issues/new).
