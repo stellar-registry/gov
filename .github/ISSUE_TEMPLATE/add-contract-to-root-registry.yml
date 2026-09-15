@@ -8,11 +8,10 @@ body:
       value: |
         Thanks for requesting a change to the Stellar Registry root registry!
 
-        Mainnet doesn't have on-chain DAO gating yet (see [stellar-registry
-        roadmap, milestone 6](https://github.com/stellar-registry/roadmap) —
-        testnet does, via Tansu, but mainnet governance is this issue
-        process), so a maintainer reviews this request and runs the
-        transaction below by hand.
+        Mainnet doesn't have on-chain DAO gating yet — testnet does, via
+        Tansu, but mainnet governance is this issue process — so a
+        maintainer reviews this request and runs the transaction below by
+        hand.
 
         See [#1](https://github.com/stellar-registry/gov/issues/1) for a past
         example of a similar request and how it was handled.
