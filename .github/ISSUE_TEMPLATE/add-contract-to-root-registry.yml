@@ -12,7 +12,7 @@ body:
         roadmap, milestone 6](https://github.com/stellar-registry/roadmap) —
         testnet does, via Tansu, but mainnet governance is this issue
         process), so a maintainer reviews this request and runs the
-        transaction below by hand. We aim for a ~24-hour response time.
+        transaction below by hand.
 
         See [#1](https://github.com/stellar-registry/gov/issues/1) for a past
         example of a similar request and how it was handled.
