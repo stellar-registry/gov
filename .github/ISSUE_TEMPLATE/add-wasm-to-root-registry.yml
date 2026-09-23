@@ -1,0 +1,100 @@
+name: Add wasm to root registry
+description: Publish a wasm hash under a new name in the Stellar Registry root registry.
+title: "Add wasm to root registry: "
+labels: ["governance", "add-wasm"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for requesting a change to the Stellar Registry root registry!
+
+        Mainnet doesn't have on-chain DAO gating yet — testnet does, via
+        Tansu, but mainnet governance is this issue process — so a
+        maintainer reviews this request and runs the transaction below by
+        hand.
+
+        This is for **first-time names** only. Once a name is published, its
+        author publishes new versions themselves.
+
+  - type: input
+    id: wasm_name
+    attributes:
+      label: Wasm name
+      description: >-
+        The name to publish in the root registry. Lowercase letters, numbers,
+        and hyphens; no channel prefix.
+      placeholder: my-contract
+    validations:
+      required: true
+
+  - type: input
+    id: wasm_version
+    attributes:
+      label: Version
+      placeholder: 1.0.0
+    validations:
+      required: true
+
+  - type: input
+    id: wasm_hash
+    attributes:
+      label: Wasm hash
+      description: The 64-character hex hash of the already-uploaded wasm.
+    validations:
+      required: true
+
+  - type: input
+    id: author_address
+    attributes:
+      label: Author address
+      description: >-
+        Who becomes the author of this name — able to publish new versions
+        later. Defaults to your own address below if left blank.
+      placeholder: GABCD… or CABCD…
+    validations:
+      required: false
+
+  - type: input
+    id: source_repo
+    attributes:
+      label: Source repo URL
+      placeholder: https://github.com/org/repo
+    validations:
+      required: false
+
+  - type: input
+    id: requester_address
+    attributes:
+      label: Your Stellar address
+      description: So we know who's asking.
+      placeholder: GABCD…
+    validations:
+      required: true
+
+  - type: input
+    id: requester_github
+    attributes:
+      label: Your GitHub username
+      placeholder: octocat
+    validations:
+      required: false
+
+  - type: textarea
+    id: justification
+    attributes:
+      label: Justification
+      description: Who are you, and why should this be trusted in the root registry?
+    validations:
+      required: true
+
+  - type: textarea
+    id: command
+    attributes:
+      label: Runnable command
+      description: >-
+        Pre-filled from the fields above when this issue is opened from
+        rgstry.xyz's governance form — a maintainer (or you, if you hold the
+        appropriate signing key) can run this directly.
+      render: shell
+    validations:
+      required: false
