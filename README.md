@@ -26,5 +26,6 @@ for a real (pre-template) example of how one of these played out.
 | --- | --- |
 | [Add contract to root registry](.github/ISSUE_TEMPLATE/add-contract-to-root-registry.yml) | Register an already-deployed contract instance in the root registry |
 | [Add wasm to root registry](.github/ISSUE_TEMPLATE/add-wasm-to-root-registry.yml) | Publish a wasm hash under a new name in the root registry |
+| [Create a new subregistry](.github/ISSUE_TEMPLATE/create-a-new-subregistry.yml) | Deploy a new named channel in the root registry |
 
-To create a new subregistry, or for any other governance request, [open a blank issue](https://github.com/stellar-registry/gov/issues/new).
+For any other governance request, [open a blank issue](https://github.com/stellar-registry/gov/issues/new).
