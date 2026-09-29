@@ -1,0 +1,74 @@
+name: Create a new subregistry
+description: Deploy a new named channel in the Stellar Registry root registry.
+title: "Create a new subregistry: "
+labels: ["governance", "new-subregistry"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for requesting a change to the Stellar Registry root registry!
+
+        Mainnet doesn't have on-chain DAO gating yet — testnet does, via
+        Tansu, but mainnet governance is this issue process — so a
+        maintainer reviews this request and runs the transaction below by
+        hand.
+
+  - type: input
+    id: channel_name
+    attributes:
+      label: Channel name
+      description: >-
+        The name to deploy the subregistry under. Lowercase letters,
+        numbers, and hyphens; no channel prefix.
+      placeholder: my-org
+    validations:
+      required: true
+
+  - type: input
+    id: admin_address
+    attributes:
+      label: Admin / manager address
+      description: >-
+        Governs this subregistry going forward — able to publish, deploy,
+        and administer entries in it. Defaults to your own address below if
+        left blank.
+      placeholder: GABCD… or CABCD…
+    validations:
+      required: false
+
+  - type: input
+    id: requester_address
+    attributes:
+      label: Your Stellar address
+      description: So we know who's asking.
+      placeholder: GABCD…
+    validations:
+      required: true
+
+  - type: input
+    id: requester_github
+    attributes:
+      label: Your GitHub username
+      placeholder: octocat
+    validations:
+      required: false
+
+  - type: textarea
+    id: justification
+    attributes:
+      label: Justification
+      description: Who are you, and why should this be trusted in the root registry?
+    validations:
+      required: true
+
+  - type: textarea
+    id: command
+    attributes:
+      label: Runnable command
+      description: >-
+        Pre-filled from the fields above when this issue is opened from
+        rgstry.xyz's governance form — a maintainer (or you, if you hold the
+        appropriate signing key) can run this directly.
+      render: shell
+    validations:
+      required: false
