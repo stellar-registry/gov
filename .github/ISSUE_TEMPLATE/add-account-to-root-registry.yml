@@ -1,0 +1,86 @@
+name: Add named account to root registry
+description: Give a G-address or smart account a name in the Stellar Registry root registry.
+title: "Add named account to root registry: "
+labels: ["governance", "add-account"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for requesting a change to the Stellar Registry root registry!
+
+        Mainnet doesn't have on-chain DAO gating yet — testnet does, via
+        Tansu, but mainnet governance is this issue process — so a
+        maintainer reviews this request and runs the registration by hand.
+
+        The named account must consent first: it runs the `preauthorize`
+        command below, signed by that account, before a maintainer
+        registers the name. The preauthorization expires after about 7 days.
+
+  - type: input
+    id: account_name
+    attributes:
+      label: Account name
+      description: >-
+        The name to register in the root registry. Lowercase letters,
+        numbers, and hyphens.
+      placeholder: my-org
+    validations:
+      required: true
+
+  - type: input
+    id: account_address
+    attributes:
+      label: Account address
+      description: The G-address or smart account (C-address) to name.
+      placeholder: GABCD… or CABCD…
+    validations:
+      required: true
+
+  - type: input
+    id: owner_address
+    attributes:
+      label: Owner address
+      description: >-
+        Who should own this name going forward — able to rename it, point it
+        at a new address, or transfer it. Defaults to your own address below
+        if left blank.
+      placeholder: GABCD… or CABCD…
+    validations:
+      required: false
+
+  - type: input
+    id: requester_address
+    attributes:
+      label: Your Stellar address
+      description: So we know who's asking.
+      placeholder: GABCD…
+    validations:
+      required: true
+
+  - type: input
+    id: requester_github
+    attributes:
+      label: Your GitHub username
+      placeholder: octocat
+    validations:
+      required: false
+
+  - type: textarea
+    id: justification
+    attributes:
+      label: Justification
+      description: Who are you, and why should this name be trusted in the root registry?
+    validations:
+      required: true
+
+  - type: textarea
+    id: command
+    attributes:
+      label: Runnable commands
+      description: >-
+        Pre-filled from the fields above when this issue is opened from
+        rgstry.xyz's governance form. The named account runs the first; a
+        maintainer runs the second.
+      render: shell
+    validations:
+      required: false
